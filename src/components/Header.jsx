@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import HeroImg from "../assets/hero.png";
+import HeroImg from "../assets/hero.svg";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
