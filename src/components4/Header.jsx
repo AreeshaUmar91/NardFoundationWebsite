@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ProjectImg from "../assets/workforus.png";
+import ProjectImg from "../assets/workforus.svg";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

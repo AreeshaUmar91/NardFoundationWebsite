@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ProjectImg from "../assets/nardhomemain.jpg"; // background
+import ProjectImg from "../assets/nardhomemain.svg"; // background
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
