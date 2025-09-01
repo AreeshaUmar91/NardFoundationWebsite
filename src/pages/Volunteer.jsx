@@ -1,5 +1,5 @@
 import Header from "../components3/Header";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import Picture from "../components3/Picture";
 import Form from "../components3/Form";
 const Volunteer = () => {

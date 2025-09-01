@@ -1,4 +1,4 @@
-import Footer from "../components/footer"
+import Footer from "../components/Footer"
 import Header from "../components6/Header"
 import Overview from "../components6/Overview"
 import Vision from "../components6/Vision"

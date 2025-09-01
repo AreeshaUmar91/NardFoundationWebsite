@@ -1,7 +1,7 @@
 import Header from '../components7/Header'
 import Contributor from '../components7/Contributor'
 import Contributor2 from '../components7/Contributor2'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 
 const Announcement = () => {
   return (

@@ -4,7 +4,7 @@ import AboutUs from "../components/AboutUs";
 import Project from "../components/Project";
 import Features from "../components/Features";
 import Blog from "../components/Blog";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
