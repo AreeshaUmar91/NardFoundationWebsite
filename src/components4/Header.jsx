@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import ProjectImg from "../assets/workforus.svg";
+import { Link, useLocation } from "react-router-dom";
+import WorkForUsBg from "../assets/workforus.svg";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   const menuItems = [
     { name: "About Us", path: "/" },
@@ -17,54 +18,34 @@ const Header = () => {
 
   return (
     <div className="relative h-screen">
-      {/* Background */}
+      {/* Background Image without blur */}
       <div
-        className="absolute inset-0 bg-center bg-cover filter blur-sm brightness-75"
-        style={{ backgroundImage: `url(${ProjectImg})` }}
+        className="absolute inset-0 bg-center bg-cover"
+        style={{ backgroundImage: `url(${WorkForUsBg})` }}
       ></div>
 
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between p-6 lg:px-8 bg-white/70 backdrop-blur-sm">
-          <div className="flex lg:flex-1 items-center gap-2">
-            <Link to="/" className="flex items-center gap-2">
-              <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
-              <span className="text-[#263750] font-bold">
-                The Nard Foundation Limited
-              </span>
-            </Link>
-          </div>
-
-          {/* Mobile Button */}
-          <div className="flex lg:hidden">
-            <button
-              onClick={() => setMobileOpen(true)}
-              className="-m-2.5 p-2.5 text-gray-700 rounded-md"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
+        <div className="flex items-start py-3 px-4 md:px-6 w-full">
+          {/* Logo + Name */}
+          <div className="flex flex-col items-center">
+            <img src="/logo.png" alt="Logo" className="h-16 w-auto" />
+            <span className="text-[#263750] font-bold text-sm mt-1 text-center">
+              The Nard Foundation Limited
+            </span>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex lg:gap-x-6 lg:items-center">
+          <nav className="hidden lg:flex flex-1 justify-around items-center bg-white/70 px-4 py-2 ml-4">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-900 font-semibold hover:text-green-500 transition"
+                className={`font-semibold whitespace-nowrap transition hover:text-green-500 ${
+                  location.pathname === item.path
+                    ? "text-green-600 border-b-2 border-green-600"
+                    : "text-gray-900"
+                }`}
               >
                 {item.name}
               </Link>
@@ -78,40 +59,84 @@ const Header = () => {
             <Link to="/login" className="text-gray-900 font-semibold">
               Log In
             </Link>
-          </div>
-        </nav>
-      </header>
+          </nav>
 
-      {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-end">
-          <div className="w-64 bg-white p-6">
+          {/* Mobile Hamburger */}
+          <div className="lg:hidden flex items-center ml-auto">
             <button
-              onClick={() => setMobileOpen(false)}
-              className="mb-4 text-gray-700 font-semibold"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 rounded-md text-gray-700 focus:outline-none"
             >
-              Close
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                {mobileOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
             </button>
-            <nav className="flex flex-col gap-4">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-gray-900 font-semibold hover:text-green-500 transition"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </nav>
           </div>
         </div>
-      )}
 
-      {/* Hero */}
+        {/* Mobile Menu */}
+        {mobileOpen && (
+          <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-end">
+            <div className="w-64 bg-white p-6">
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="mb-4 text-gray-700 font-semibold"
+              >
+                Close
+              </button>
+              <nav className="flex flex-col gap-4">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={() => setMobileOpen(false)}
+                    className="font-semibold text-gray-900 hover:text-green-500 transition"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  to="/signup"
+                  onClick={() => setMobileOpen(false)}
+                  className="bg-green-500 text-white px-4 py-2 rounded font-semibold"
+                >
+                  Sign Up
+                </Link>
+                <Link
+                  to="/login"
+                  onClick={() => setMobileOpen(false)}
+                  className="text-gray-900 font-semibold"
+                >
+                  Log In
+                </Link>
+              </nav>
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <h1 className="text-5xl sm:text-7xl font-bold text-white drop-shadow-lg">
-         Social Needs <br/> Individuals
+          Social Needs <br /> Individuals
         </h1>
       </div>
     </div>

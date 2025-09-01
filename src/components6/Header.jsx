@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from "react"; 
 import { Link } from "react-router-dom";
-import ProjectImg from "../assets/nardhomemain.svg"; // background
+import ProjectImg from "../assets/nardhomemain.svg";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,107 +17,118 @@ const Header = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background with blur */}
+      {/* Background Image without blur */}
       <div
-        className="absolute inset-0 bg-center bg-cover filter blur-sm brightness-75"
+        className="absolute inset-0 bg-center bg-cover"
         style={{ backgroundImage: `url(${ProjectImg})` }}
       ></div>
 
       {/* Navbar */}
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between p-6 lg:px-8 bg-white/70 backdrop-blur-sm">
-          {/* Logo */}
-          <div className="flex lg:flex-1 items-center gap-2">
-            <Link to="/" className="flex items-center gap-2">
-              <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
-              <span className="text-[#263750] font-bold">
-                The Nard Foundation Limited
-              </span>
-            </Link>
+        <div className="flex items-start flex-nowrap py-3 px-4 md:px-6 bg-transparent w-full">
+          {/* Logo + Name */}
+          <div className="flex flex-col items-center">
+            <img src="/logo.png" alt="Logo" className="h-16 w-auto" />
+            <span className="text-[#263750] font-medium text-sm mt-1 text-center">
+              The Nard Foundation Limited
+            </span>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex lg:hidden">
-            <button
-              onClick={() => setMobileOpen(true)}
-              className="-m-2.5 p-2.5 text-gray-700 rounded-md"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
-          </div>
-
-          {/* Desktop menu */}
-          <div className="hidden lg:flex lg:gap-x-6 lg:items-center">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex flex-1 justify-around items-center bg-[#FFFFFF80] px-4 py-2 ml-4 rounded-md">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-900 font-semibold hover:text-green-500 transition"
+                className="font-medium whitespace-nowrap text-gray-900 hover:text-green-500 transition"
               >
                 {item.name}
               </Link>
             ))}
             <Link
               to="/signup"
-              className="bg-green-500 text-white px-4 py-2 rounded font-semibold"
+              className="bg-green-500 text-white px-3 py-1 font-medium rounded"
             >
               Sign Up
             </Link>
-            <Link to="/login" className="text-gray-900 font-semibold">
+            <Link to="/login" className="text-gray-900 font-medium">
               Log In
             </Link>
-          </div>
-        </nav>
-      </header>
+          </nav>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-end">
-          <div className="w-64 bg-white p-6">
+          {/* Mobile Hamburger */}
+          <div className="lg:hidden flex items-center ml-auto">
             <button
-              onClick={() => setMobileOpen(false)}
-              className="mb-4 text-gray-700 font-semibold"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 rounded-md text-gray-700 focus:outline-none"
             >
-              Close
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                {mobileOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
             </button>
-            <nav className="flex flex-col gap-4">
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileOpen && (
+          <div className="lg:hidden bg-[#FFFFFF80] w-full absolute top-full left-0 z-50 shadow-md">
+            <nav className="flex flex-col gap-4 p-4">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
                   onClick={() => setMobileOpen(false)}
-                  className="text-gray-900 font-semibold hover:text-green-500 transition"
+                  className="font-medium text-gray-900 hover:text-green-500 transition"
                 >
                   {item.name}
                 </Link>
               ))}
+              <Link
+                to="/signup"
+                onClick={() => setMobileOpen(false)}
+                className="bg-green-500 text-white px-3 py-1 font-medium rounded"
+              >
+                Sign Up
+              </Link>
+              <Link
+                to="/login"
+                onClick={() => setMobileOpen(false)}
+                className="text-gray-900 font-medium"
+              >
+                Log In
+              </Link>
             </nav>
           </div>
-        </div>
-      )}
+        )}
+      </header>
 
-      {/* Main Content - Text Only */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-8 py-32 max-w-4xl mx-auto text-center lg:text-left">
-        <h1 className="text-4xl font-bold text-[#29659A]">
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-start justify-start h-full pl-4 sm:pl-16 md:pl-[100px] pt-32 max-w-4xl">
+        <h1 className="text-4xl font-medium text-[#29659A]">
           Nard HomeBiz Solutions
         </h1>
-        <h2 className="text-xl font-semibold text-[#8396AC] mt-2">
+        <h2 className="text-xl font-medium text-[#8396AC] mt-2">
           Small Home-Based Business Application
         </h2>
-        <hr className="border-gray-300 w-20 my-4 mx-auto lg:mx-0" />
+        <hr className="border-gray-300 w-20 my-4" />
         <p className="text-gray-800 leading-relaxed">
           The main goal of NardHomeBusiness is to help home-based entrepreneurs
           manage their businesses more easily, handle orders efficiently, and

@@ -15,14 +15,35 @@ const Project = () => {
     <section className="py-16 bg-white">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6">
         {/* Heading */}
-        <h4 className="text-green-500 text-sm sm:text-base font-semibold mb-2">
+        <h4
+          className="text-green-500 mb-2"
+          style={{ fontWeight: 500, fontSize: "35px" }}
+        >
           Our Projects
         </h4>
 
-        {/* Subheading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 leading-snug text-left">
-          You can help lots of people <br /> by donating little.
-        </h1>
+        {/* Subheading and Button - Responsive */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 gap-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-left">
+            You can help lots of people <br /> by donating little.
+          </h1>
+
+          <Link
+            to="/projects"
+            className="flex items-center justify-center text-white font-semibold"
+            style={{
+              width: "180px",        // proper width
+              height: "60px",        // proper height
+              backgroundColor: "#2E4049",
+              borderRadius: "12px",  // rounded corners
+              transform: "rotate(-0.04deg)",
+              opacity: 1,
+              padding: "0 20px",
+            }}
+          >
+            More Projects
+          </Link>
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
