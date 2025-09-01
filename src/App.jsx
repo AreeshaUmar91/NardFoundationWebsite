@@ -9,6 +9,7 @@ import Announcement from "./pages/Announcement";
 import Signup from "./pages/Signup";
 import Joinnow from "./pages/Joinnow";
 import Login from "./pages/Login";
+import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
@@ -23,7 +24,8 @@ function App() {
    <Route path="/announcement" element={<Announcement/>}/>
    <Route path="/signup" element={<Signup/>}/>
    <Route path="/join-now" element={<Joinnow/>}/>
-   <Route path="login" element={<Login/>}/>
+   <Route path="/login" element={<Login/>}/>
+   <Route path="/contactus" element={<Contact/>}/>
 </Routes>
    </Router>
   );
