@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-import Header from "../components/header";
+import Header from "../components/Header";
 import AboutUs from "../components/AboutUs";
 import Project from "../components/Project";
 import Features from "../components/Features";
