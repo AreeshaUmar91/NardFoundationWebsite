@@ -1,6 +1,4 @@
-import React from "react"; 
-import DonationImage from "../assets/chart.svg"; // Replace with your actual image path
-
+import DonationImage from "../assets/Chart.svg"; // Replace with your actual image path
 const AboutUs = () => {
   return (
     <section className="py-16 bg-white">
