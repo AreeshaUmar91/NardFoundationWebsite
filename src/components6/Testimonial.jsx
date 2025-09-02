@@ -1,5 +1,5 @@
 import TestimonialImg from "../assets/small-pic.png"; // Left small testimonial bar
-import SmallImg from "../assets/testimonialS.SVg"; // Profile image overlay
+import SmallImg from "../assets/testimonialS.svg"; // Profile image overlay
 
 const Testimonials = () => {
   return (
