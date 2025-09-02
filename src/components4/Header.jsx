@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ContributionBg from "../assets/contribution.svg";
+import ContributionBg from "../assets/workforus.png";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -137,7 +137,7 @@ const Header = () => {
       <div className="relative z-10 flex items-center h-full px-6 lg:px-24">
         <div className="max-w-xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg text-left">
-            Contribution
+            Special Needs<br/>Individuals
           </h1>
         </div>
       </div>

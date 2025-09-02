@@ -1,4 +1,4 @@
-import { useState } from "react"; 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ProjectImg from "../assets/nardhomemain.svg";
 
@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background Image without blur */}
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-center bg-cover"
         style={{ backgroundImage: `url(${ProjectImg})` }}
@@ -25,7 +25,7 @@ const Header = () => {
 
       {/* Navbar */}
       <header className="absolute inset-x-0 top-0 z-50">
-        <div className="flex items-start flex-nowrap py-3 px-4 md:px-6 bg-transparent w-full">
+        <div className="flex items-center justify-between py-3 px-4 md:px-6 bg-transparent w-full">
           {/* Logo + Name */}
           <div className="flex flex-col items-center">
             <img src="/logo.png" alt="Logo" className="h-16 w-auto" />
@@ -35,7 +35,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex flex-1 justify-around items-center bg-[#FFFFFF80] px-4 py-2 ml-4 rounded-md">
+          <nav className="hidden lg:flex flex-1 justify-around items-center bg-[#FFFFFFCC] px-4 py-2 ml-4 rounded-md">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
@@ -47,11 +47,14 @@ const Header = () => {
             ))}
             <Link
               to="/signup"
-              className="bg-green-500 text-white px-3 py-1 font-medium rounded"
+              className="bg-green-500 text-white px-4 py-2 font-medium rounded"
             >
               Sign Up
             </Link>
-            <Link to="/login" className="text-gray-900 font-medium">
+            <Link
+              to="/login"
+              className="text-gray-900 font-medium"
+            >
               Log In
             </Link>
           </nav>
@@ -89,54 +92,56 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-[#FFFFFF80] w-full absolute top-full left-0 z-50 shadow-md">
-            <nav className="flex flex-col gap-4 p-4">
-              {menuItems.map((item) => (
+          <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-end">
+            <div className="w-64 bg-white p-6 h-full">
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="mb-4 text-gray-700 font-semibold"
+              >
+                Close
+              </button>
+              <nav className="flex flex-col gap-4 mt-4">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={() => setMobileOpen(false)}
+                    className="font-medium text-gray-900 hover:text-green-500 transition"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
                 <Link
-                  key={item.name}
-                  to={item.path}
+                  to="/signup"
                   onClick={() => setMobileOpen(false)}
-                  className="font-medium text-gray-900 hover:text-green-500 transition"
+                  className="bg-green-500 text-white px-4 py-2 rounded font-medium"
                 >
-                  {item.name}
+                  Sign Up
                 </Link>
-              ))}
-              <Link
-                to="/signup"
-                onClick={() => setMobileOpen(false)}
-                className="bg-green-500 text-white px-3 py-1 font-medium rounded"
-              >
-                Sign Up
-              </Link>
-              <Link
-                to="/login"
-                onClick={() => setMobileOpen(false)}
-                className="text-gray-900 font-medium"
-              >
-                Log In
-              </Link>
-            </nav>
+                <Link
+                  to="/login"
+                  onClick={() => setMobileOpen(false)}
+                  className="text-gray-900 font-medium"
+                >
+                  Log In
+                </Link>
+              </nav>
+            </div>
           </div>
         )}
       </header>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-start justify-start h-full pl-4 sm:pl-16 md:pl-[100px] pt-32 max-w-4xl">
-        <h1 className="text-4xl font-medium text-[#29659A]">
+      <div className="relative z-10 flex flex-col items-start justify-start h-full px-4 sm:px-8 md:px-16 pt-32 max-w-4xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#29659A]">
           Nard HomeBiz Solutions
         </h1>
-        <h2 className="text-xl font-medium text-[#8396AC] mt-2">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-[#8396AC] mt-2">
           Small Home-Based Business Application
         </h2>
         <hr className="border-gray-300 w-20 my-4" />
-        <p className="text-gray-800 leading-relaxed">
-          The main goal of NardHomeBusiness is to help home-based entrepreneurs
-          manage their businesses more easily, handle orders efficiently, and
-          communicate better with customers. It aims to simplify running a
-          home business and support entrepreneurs in growing their ventures
-          effectively. With its user-friendly features, the app is designed to
-          make the process smoother and more successful for home-based
-          businesses.
+        <p className="text-sm sm:text-base md:text-lg text-gray-800 leading-relaxed">
+          The main goal of NardHomeBusiness is to help home-based<br /> businesses manage their operations more easily, handle orders<br /> efficiently, and communicate better with customers. It aims to simplify<br /> running a home business and support entrepreneurs in growing their<br /> ventures effectively. With its user-friendly features, the app is designed<br /> to make the process smoother and more successful for home-based <br />businesses.
         </p>
       </div>
     </div>

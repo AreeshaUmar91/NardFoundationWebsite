@@ -28,21 +28,21 @@ const Overview = () => {
   ];
 
   return (
-    <section className="bg-white text-black py-16 px-6">
+    <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto text-center space-y-6">
 
         {/* Small Heading */}
-        <h3 className="text-sm font-semibold text-[#8396AC] uppercase tracking-wide">
+        <h3 className="text-sm sm:text-base font-semibold text-[#8396AC] uppercase tracking-wide">
           Overview
         </h3>
 
         {/* Large Heading */}
-        <h2 className="text-4xl font-bold text-black">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black">
           Why NardHomeBizSolutions
         </h2>
 
         {/* Content Paragraph */}
-        <p className="text-gray-800 leading-relaxed text-lg max-w-3xl mx-auto">
+        <p className="text-gray-800 leading-relaxed text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
           Nard HomeBiz Solutions offers several compelling advantages for
           businesses looking to enhance their operations and achieve sustainable
           growth, specializes in providing customized strategies that cater to
@@ -52,7 +52,7 @@ const Overview = () => {
         </p>
 
         {/* Boxes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-12">
           {boxes.map((box, index) => (
             <div
               key={index}
@@ -61,11 +61,10 @@ const Overview = () => {
               <img
                 src={box.img}
                 alt={box.title}
-                className="mb-4"
-                style={{ width: "86px", height: "60px" }}
+                className="mb-4 w-20 h-16 sm:w-24 sm:h-20"
               />
-              <h4 className="text-xl font-semibold mb-2">{box.title}</h4>
-              <p className="text-gray-700 text-center">{box.desc}</p>
+              <h4 className="text-lg sm:text-xl font-semibold mb-2 text-center">{box.title}</h4>
+              <p className="text-gray-700 text-sm sm:text-base text-center">{box.desc}</p>
             </div>
           ))}
         </div>

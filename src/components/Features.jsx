@@ -1,4 +1,3 @@
-// FeaturesAndStats.jsx
 import React from "react";
 import MilestoneImg from "../assets/feature1.png";
 import DonationImg from "../assets/feature2.png";
@@ -65,12 +64,12 @@ const FeaturesAndStats = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#C1FFC3] rounded-lg shadow-md flex flex-col overflow-hidden p-6"
+                className="bg-[#C1FFC3] flex flex-col overflow-hidden p-6"
               >
                 <img
                   src={feature.img}
                   alt={feature.title}
-                  className="w-16 h-16 object-cover mb-4 rounded-full"
+                  className="w-16 h-16 object-cover mb-4"
                 />
                 <h3 className="text-xl sm:text-2xl font-semibold mb-2">
                   {feature.title}
@@ -89,7 +88,7 @@ const FeaturesAndStats = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-[#C1FFC3] rounded-lg shadow-md flex flex-col items-center justify-center p-6 h-72"
+                className="bg-[#C1FFC3] flex flex-col items-center justify-center p-6 h-72"
               >
                 <img
                   src={stat.img}

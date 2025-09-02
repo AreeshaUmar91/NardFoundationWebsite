@@ -123,7 +123,7 @@ const Header = () => {
       {/* Announcement Heading */}
       <div className="relative z-10 flex items-center justify-center h-screen text-center px-6">
         <h1 className="text-5xl sm:text-7xl text-black leading-tight">
-          <span className="font-normal">Contact</span> <br />
+          <span>Contact</span> <br />
           <span className="font-bold">Contact</span> <br />
           <span className="font-bold">Us</span>
         </h1>

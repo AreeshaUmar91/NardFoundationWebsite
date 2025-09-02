@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from "react"; 
 import { Link, useLocation } from "react-router-dom";
-import ProjectImg from "../assets/contribution.svg";
+import ProjectImg from "../assets/contribution.svg"; // Replace with Contribution image if needed
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,15 +18,15 @@ const Header = () => {
 
   return (
     <div className="relative h-screen">
-      {/* Background Image without blur */}
+      {/* Background */}
       <div
-        className="absolute inset-0 bg-center bg-cover"
+        className="absolute inset-0 bg-center bg-cover brightness-75"
         style={{ backgroundImage: `url(${ProjectImg})` }}
       ></div>
 
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
-        <div className="flex items-start py-3 px-4 md:px-6 w-full">
+        <div className="flex items-start py-3 px-4 md:px-6 w-full bg-transparent">
           {/* Logo + Name */}
           <div className="flex flex-col items-center">
             <img src="/logo.png" alt="Logo" className="h-16 w-auto" />
@@ -36,7 +36,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex flex-1 justify-around items-center bg-white/70 px-6 py-2 ml-4 rounded-md">
+          <nav className="hidden lg:flex flex-1 justify-around items-center bg-white/70 px-4 py-2 ml-4 rounded-md">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
@@ -92,7 +92,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu (exact Projects page style) */}
         {mobileOpen && (
           <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-end">
             <div className="w-64 bg-white p-6">
@@ -134,8 +134,8 @@ const Header = () => {
       </header>
 
       {/* Hero */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-left px-6">
-        <h1 className="text-5xl sm:text-7xl  text-white drop-shadow-lg">
+      <div className="relative z-10 flex flex-col items-start justify-center h-full pl-4 sm:pl-16 md:pl-[100px] text-left">
+        <h1 className="text-5xl sm:text-7xl font-bold text-white drop-shadow-lg">
           Contribution
         </h1>
       </div>
