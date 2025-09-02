@@ -104,7 +104,7 @@ const Footer = () => {
 
       {/* Bottom Line */}
       <div className="mt-6 py-4 text-center text-sm text-white">
-        &copy; {new Date().getFullYear()} Nard Foundation. All rights reserved.
+      Copyright  &copy; Nard Foundation. 
       </div>
     </footer>
   );

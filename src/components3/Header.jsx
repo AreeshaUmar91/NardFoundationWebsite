@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import VolunteerBg from "../assets/volunteermain.svg";
+import VolunteerBg from "../assets/workforus.svg";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

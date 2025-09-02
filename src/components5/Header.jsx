@@ -134,8 +134,8 @@ const Header = () => {
       </header>
 
       {/* Hero */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <h1 className="text-5xl sm:text-7xl font-bold text-white drop-shadow-lg">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-left px-6">
+        <h1 className="text-5xl sm:text-7xl  text-white drop-shadow-lg">
           Contribution
         </h1>
       </div>

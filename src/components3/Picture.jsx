@@ -10,7 +10,7 @@ const Picture = () => {
 
         {/* Section Title */}
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-left mb-12">
-         A Glimpse of second chances
+         Our Partner
         </h2>
 
         {/* First Row - 3 images side by side */}

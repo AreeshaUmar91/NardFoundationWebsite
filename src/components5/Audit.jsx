@@ -1,4 +1,4 @@
-import { FaFilePdf } from "react-icons/fa"; // PDF icon
+import PdfImg from "../assets/pdf-icon.svg"; // PDF image file
 
 const Audit = () => {
   const reports = [
@@ -9,34 +9,39 @@ const Audit = () => {
 
   return (
     <section className="bg-white py-8">
-      <div className="max-w-4xl mx-auto px-4 border border-gray-300 rounded-lg p-4">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 p-6 rounded-lg shadow-lg border-none">
+
         {/* Section Heading */}
-        <h2 className="text-2xl font-bold text-black mb-4 text-center">
+        <h2 className="text-2xl font-bold text-black mb-4 text-left">
           Annual Audit Report
         </h2>
 
         {/* Table Header */}
-        <div className="grid grid-cols-12 items-center mb-2">
-          <span className="col-span-2 text-black text-center">No</span>
-          <span className="col-span-7 text-black text-center">Documents</span>
-          <span className="col-span-3 text-black text-center">PDF</span>
+        <div className="hidden sm:grid grid-cols-12 items-center mb-2">
+          <span className="col-span-2 text-black text-center font-bold py-2">No</span>
+          <span className="col-span-7 text-black text-center font-bold py-2">Documents</span>
+          <span className="col-span-3 text-black text-center font-bold py-2">PDF</span>
         </div>
 
         {/* Table Rows */}
         {reports.map((report) => (
           <div
             key={report.id}
-            className="grid grid-cols-12 items-center py-1"
+            className="grid grid-cols-1 sm:grid-cols-12 items-center mb-2 bg-white rounded-lg shadow-sm p-2 sm:p-0"
           >
             {/* No */}
-            <span className="col-span-2 text-black text-center">{report.id}</span>
+            <span className="sm:col-span-2 text-black text-center sm:text-center py-2 sm:py-0">
+              {report.id}
+            </span>
 
             {/* Document Name */}
-            <span className="col-span-7 text-black text-center">{report.title}</span>
+            <span className="sm:col-span-7 text-black text-center sm:text-left py-2 sm:py-0">
+              {report.title}
+            </span>
 
-            {/* PDF Icon */}
-            <div className="col-span-3 flex justify-center">
-              <FaFilePdf className="text-red-600 w-6 h-6" />
+            {/* PDF Image */}
+            <div className="sm:col-span-3 flex justify-center py-2 sm:py-0">
+              <img src={PdfImg} alt="PDF" className="w-6 h-6 object-contain" />
             </div>
           </div>
         ))}

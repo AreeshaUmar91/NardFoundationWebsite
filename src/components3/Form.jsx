@@ -33,73 +33,73 @@ const Form = () => {
             className="mt-4 w-full h-40 object-cover"
           />
           {/* Donate Now Button */}
-          <button className="mt-4 py-2 px-4 bg-[#263750] text-white font-semibold rounded-lg w-max hover:bg-gray-800 transition">
-            Donate Now
+          <button className="mt-4 py-4 px-6 bg-[#263750] text-white  rounded-3xl w-max hover:bg-gray-800 transition">
+            DONATE NOW
           </button>
         </div>
 
         {/* Right Side - Form */}
-        <div className="lg:w-1/2 p-6 rounded-lg border border-white flex flex-col gap-4 bg-white/10">
-          <h3 className="text-2xl font-bold text-white mb-4">Become a Volunteer</h3>
+        <div className="lg:w-1/2 p-6 rounded-xl border border-white flex flex-col gap-4 bg-white/10">
+          <h3 className="text-2xl font-bold text-white mb-4">Become A Volunteer</h3>
 
           <form className="flex flex-col gap-4 text-black">
             <input
               type="text"
               placeholder="Full Name"
-              className="p-2 rounded border border-white bg-white/20 placeholder-white text-white"
+              className="p-3 rounded border border-white bg-white/20 placeholder-white text-white"
             />
             <input
               type="number"
               placeholder="Age"
-              className="p-2 rounded border border-white bg-white/20 placeholder-white text-white"
+              className="p-3 rounded border border-white bg-white/20 placeholder-white text-white"
             />
             <input
               type="email"
               placeholder="Email Address"
-              className="p-2 rounded border border-white bg-white/20 placeholder-white text-white"
+              className="p-3 rounded border border-white bg-white/20 placeholder-white text-white"
             />
             <input
               type="password"
               placeholder="Login Password"
-              className="p-2 rounded border border-white bg-white/20 placeholder-white text-white"
+              className="p-3 rounded border border-white bg-white/20 placeholder-white text-white"
             />
 
-            {/* Region Dropdown */}
+            {/* Region Dropdown with white border and normal font */}
             <select
-              className="p-2 rounded border border-white bg-white text-black"
+              className="p-3 rounded border border-white bg-white/20 text-white font-normal focus:ring-0 focus:outline-none"
               defaultValue=""
             >
-              <option value="" disabled>Select Region</option>
-              <option value="north">North</option>
-              <option value="south">South</option>
-              <option value="east">East</option>
-              <option value="west">West</option>
-              <option value="central">Central</option>
+              <option className="font-normal text-white" value="" disabled>Select Region</option>
+              <option className="font-normal text-white" value="north">North</option>
+              <option className="font-normal text-white" value="south">South</option>
+              <option className="font-normal text-white" value="east">East</option>
+              <option className="font-normal text-white" value="west">West</option>
+              <option className="font-normal text-white" value="central">Central</option>
             </select>
 
             <input
               type="text"
               placeholder="H/P Number"
-              className="p-2 rounded border border-white bg-white/20 placeholder-white text-white"
+              className="p-3 rounded border border-white bg-white/20 placeholder-white text-white"
             />
             <input
               type="text"
               placeholder="Emergency Contact"
-              className="p-2 rounded border border-white bg-white/20 placeholder-white text-white"
+              className="p-3 rounded border border-white bg-white/20 placeholder-white text-white"
             />
             <input
               type="text"
               placeholder="Profession / Interest"
-              className="p-2 rounded border border-white bg-white/20 placeholder-white text-white"
+              className="p-3 rounded border border-white bg-white/20 placeholder-white text-white"
             />
 
-            {/* Submit button small and left-aligned */}
-            <button
-              type="submit"
-              className="py-1 px-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-200 transition self-start"
-            >
-              Submit
-            </button>
+            {/* Submit button with increased padding and black text */}
+           <button
+  type="submit"
+  className="py-4 px-6 bg-white text-black rounded-3xl font-normal hover:bg-gray-200 transition self-start"
+>
+  SUBMIT NOW
+</button>
           </form>
         </div>
       </div>

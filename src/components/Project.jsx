@@ -23,25 +23,25 @@ const Project = () => {
         </h4>
 
         {/* Subheading and Button - Responsive */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 gap-4 mr-100">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-left">
             You can help lots of people <br /> by donating little.
           </h1>
 
           <Link
             to="/projects"
-            className="flex items-center justify-center text-white font-semibold"
+            className="flex items-center justify-center text-white font-normal" // font-normal removes bold
             style={{
-              width: "180px",        // proper width
-              height: "60px",        // proper height
+              width: "180px",           // button width
+              height: "60px",           // button height
               backgroundColor: "#2E4049",
-              borderRadius: "12px",  // rounded corners
+              borderRadius: "50px",     // increased border radius
               transform: "rotate(-0.04deg)",
               opacity: 1,
-              padding: "0 20px",
+              paddingRight: "30px 30px",     // increased padding for text
             }}
           >
-            More Projects
+            MORE PROJECTS
           </Link>
         </div>
 

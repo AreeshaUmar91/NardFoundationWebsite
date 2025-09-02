@@ -1,12 +1,13 @@
-import React from "react";
-import AboutImage from "../assets/about.png";
+import React from "react"; 
+import DonationImage from "../assets/chart.svg"; // Replace with your actual image path
 
 const AboutUs = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-stretch gap-10">
-
-        {/* Left side - Text */}
+      <div className="max-w-6xl ml-2 mr-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-stretch gap-16">
+        {/* Increased gap from 10 to 16 for more space */}
+        
+        {/* Left side - Heading + Content */}
         <div className="md:w-1/2 flex flex-col justify-center">
           <h4
             className="text-green-500 mb-2"
@@ -25,13 +26,55 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Right side - Image */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        {/* Right side - Six items + Donation Info */}
+        <div className="md:w-1/2 bg-[#ECF1F0] p-5 flex flex-col items-start ml-100">
+          
+          {/* Six items - 3 on left, 3 on right */}
+          <div className="grid grid-cols-2 gap-6 mb-6 w-full">
+            {[
+              "Food Donation",
+              "Money Donation",
+              "Dress Donation",
+              "Water Supply",
+              "Education Donation",
+              "Toys Donation"
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-3">
+                {/* Circle with tick */}
+                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-green-500 text-white font-bold">
+                  ✓
+                </div>
+                <span className="text-black">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Total Donation heading with 10px left padding */}
+          <h3 className="text-[#2E4049] font-bold text-lg mb-2 pl-[10px]">
+            Total Donation
+          </h3>
+
+          {/* Image immediately under heading, aligned with heading */}
           <img
-            src={AboutImage}
-            alt="Special Needs Support"
-            className="w-full max-w-md md:max-w-full h-auto object-cover rounded-lg shadow-lg"
+            src={DonationImage}
+            alt="Donation"
+            className="w-[400px] h-[4px] mb-4 pl-[10px]"
           />
+
+          {/* Collection and Goal on the same line, bold */}
+          <div className="flex justify-between w-full px-[10px] font-bold text-[#2E4049] text-lg mb-4">
+            <span>Collection - $5M</span>
+            <span>Goal - $10M</span>
+          </div>
+
+          {/* DONATE NOW Button with padding and regular text */}
+          <button
+            className="bg-white text-[#2E4049] font-normal px-12 py-4 rounded-full text-lg"
+            style={{ borderRadius: "34px" }}
+          >
+            DONATE NOW
+          </button>
+
         </div>
 
       </div>

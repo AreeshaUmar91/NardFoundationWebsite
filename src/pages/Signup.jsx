@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import FeatureImg1 from "../assets/signup.png";
 import FeatureImg2 from "../assets/signup.png";
@@ -32,7 +31,7 @@ const Signup = () => {
         <h1 className="text-5xl font-bold text-gray-900">Work With Us</h1>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg gap-8">
         {sections.map((section, index) => (
           <div
             key={index}
@@ -48,7 +47,7 @@ const Signup = () => {
             </h3>
             <p className="text-gray-600 mb-6">{section.content}</p>
             <Link to="/join-now">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+              <button className=" text-#273750 border border-#273750-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
                 Join Now
               </button>
             </Link>

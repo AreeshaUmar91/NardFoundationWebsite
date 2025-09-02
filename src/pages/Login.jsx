@@ -20,7 +20,7 @@ const Login = () => {
     <section className="bg-gray-100 min-h-screen flex items-center justify-center px-6 py-20">
       <div className="bg-white p-10 rounded-lg shadow-md w-full max-w-md">
         <h1 className="text-3xl font-bold text-[#273750] mb-8 text-center">
-          Login
+          Work For Us
         </h1>
         <form onSubmit={handleLogin} className="space-y-4">
           {/* Email Address */}
@@ -39,7 +39,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder=" Login Password"
               value={formData.password}
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 rounded"

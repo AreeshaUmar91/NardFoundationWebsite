@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import WorkForUsBg from "../assets/workforus.svg";
+import ContributionBg from "../assets/contribution.svg";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,10 +18,10 @@ const Header = () => {
 
   return (
     <div className="relative h-screen">
-      {/* Background Image without blur */}
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: `url(${WorkForUsBg})` }}
+        style={{ backgroundImage: `url(${ContributionBg})` }}
       ></div>
 
       {/* Header */}
@@ -36,7 +36,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex flex-1 justify-around items-center bg-white/70 px-4 py-2 ml-4">
+          <nav className="hidden lg:flex flex-1 justify-around items-center bg-white/70 px-4 py-2 ml-4 rounded-md">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
@@ -133,11 +133,13 @@ const Header = () => {
         )}
       </header>
 
-      {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <h1 className="text-5xl sm:text-7xl font-bold text-white drop-shadow-lg">
-          Social Needs <br /> Individuals
-        </h1>
+      {/* Hero Content aligned left and responsive */}
+      <div className="relative z-10 flex items-center h-full px-6 lg:px-24">
+        <div className="max-w-xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg text-left">
+            Contribution
+          </h1>
+        </div>
       </div>
     </div>
   );
