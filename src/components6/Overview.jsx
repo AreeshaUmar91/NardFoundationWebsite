@@ -28,7 +28,7 @@ const Overview = () => {
   ];
 
   return (
-    <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white   text-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto text-center space-y-6">
 
         {/* Small Heading */}
@@ -42,7 +42,7 @@ const Overview = () => {
         </h2>
 
         {/* Content Paragraph */}
-        <p className="text-gray-800 leading-relaxed text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
+        <p className="text-gray-800 leading-relaxed text-base sm:text-lg md:text-xl max-w-6xl mx-auto">
           Nard HomeBiz Solutions offers several compelling advantages for
           businesses looking to enhance their operations and achieve sustainable
           growth, specializes in providing customized strategies that cater to
@@ -52,22 +52,23 @@ const Overview = () => {
         </p>
 
         {/* Boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
-          {boxes.map((box, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center"
-            >
-              <img
-                src={box.img}
-                alt={box.title}
-                className="mb-4 w-20 h-16 sm:w-24 sm:h-20"
-              />
-              <h4 className="text-lg sm:text-xl font-semibold mb-2">{box.title}</h4>
-              <p className="text-gray-700 text-sm sm:text-base">{box.desc}</p>
-            </div>
-          ))}
-        </div>
+       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto justify-items-center">
+  {boxes.map((box, index) => (
+    <div
+      key={index}
+      className="flex flex-col items-center text-center"
+    >
+      <img
+        src={box.img}
+        alt={box.title}
+        className="mb-4 w-20 h-16 sm:w-24 sm:h-20"
+      />
+      <h4 className="text-lg sm:text-xl font-semibold mb-2">{box.title}</h4>
+      <p className="text-gray-700 text-sm sm:text-base">{box.desc}</p>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );
