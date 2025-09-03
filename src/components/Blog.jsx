@@ -3,9 +3,9 @@ import BlogImage from "../assets/blog.png";
 
 const Blog = () => {
   return (
-    <section className="relative -mt-28 z-10" id="blog">
-      <div className="max-w-6xl mx-auto px-0 sm:px-0 lg:px-0">
-        {/* Grid with no gap */}
+    <section className="relative -mt-28 z-10 mx-[100px]" id="blog">
+      <div className="max-w-6xl mx-auto px-0">
+        {/* Grid with no gap between blogs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 
           {/* Blog 1 */}

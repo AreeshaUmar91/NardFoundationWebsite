@@ -55,7 +55,7 @@ const FeaturesAndStats = () => {
   return (
     <>
       {/* Features Section */}
-      <section className="py-16 bg-white" id="features">
+      <section className="py-16 bg-white mx-[50px]" id="features">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="text-black text-3xl sm:text-4xl font-bold mb-12 text-left">
             Our Features
@@ -82,7 +82,7 @@ const FeaturesAndStats = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white -mt-10 py-12" id="stats">
+      <section className="bg-white -mt-10 py-12 mx-[50px]" id="stats">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (

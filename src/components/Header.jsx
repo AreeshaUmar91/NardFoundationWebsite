@@ -66,7 +66,7 @@ const Header = () => {
           <div className="lg:hidden flex items-center ml-auto">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-md text-gray-700 focus:outline-none"
+              className="p-2 rounded-md text-white focus:outline-none"
             >
               <svg
                 className="w-6 h-6"
