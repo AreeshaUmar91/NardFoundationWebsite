@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"; 
 import { Link } from "react-router-dom";
 import ProjectImg from "../assets/nardhomemain.svg";
 
@@ -17,10 +17,12 @@ const Header = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background Image */}
+      {/* Background Image with white shadow on left */}
       <div
         className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: `url(${ProjectImg})` }}
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0)), url(${ProjectImg})`,
+        }}
       ></div>
 
       {/* Navbar */}

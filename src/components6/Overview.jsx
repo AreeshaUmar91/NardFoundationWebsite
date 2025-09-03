@@ -52,19 +52,19 @@ const Overview = () => {
         </p>
 
         {/* Boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
           {boxes.map((box, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-sm flex flex-col items-center transition hover:shadow-md"
+              className="flex flex-col items-center text-center"
             >
               <img
                 src={box.img}
                 alt={box.title}
                 className="mb-4 w-20 h-16 sm:w-24 sm:h-20"
               />
-              <h4 className="text-lg sm:text-xl font-semibold mb-2 text-center">{box.title}</h4>
-              <p className="text-gray-700 text-sm sm:text-base text-center">{box.desc}</p>
+              <h4 className="text-lg sm:text-xl font-semibold mb-2">{box.title}</h4>
+              <p className="text-gray-700 text-sm sm:text-base">{box.desc}</p>
             </div>
           ))}
         </div>

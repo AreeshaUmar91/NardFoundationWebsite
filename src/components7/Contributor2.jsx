@@ -36,7 +36,7 @@ const Contributor2 = () => {
 
             {/* Insert Announcement after first row */}
             {index === 0 && (
-              <div className="bg-white m-6 p-4 rounded-lg shadow-md text-center">
+              <div className="bg-white m-6 p-4  text-center">
                 <h4 className="text-sm font-semibold text-black mb-2">Announcement</h4>
                 <p className="text-gray-700 leading-relaxed">
                   Lorem ipsum dolor sit amet consectetur. Facilisis pharetra risus varius mauris at. 

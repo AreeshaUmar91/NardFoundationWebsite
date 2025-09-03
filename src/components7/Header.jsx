@@ -17,10 +17,12 @@ const Header = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background Image */}
+      {/* Background with white shadow on left */}
       <div
         className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: `url(${ProjectImg})` }}
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.4), rgba(255,255,255,0)), url(${ProjectImg})`,
+        }}
       ></div>
 
       {/* Navbar */}
