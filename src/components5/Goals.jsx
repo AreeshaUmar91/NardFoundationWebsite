@@ -3,7 +3,7 @@ import { FaPlus } from "react-icons/fa";
 
 const Goals = () => {
   return (
-    <section className="bg-white text-black m-4 sm:m-6 md:m-12 rounded-lg shadow-sm">
+    <section className="bg-white text-black mx-150px m-4 sm:m-6 md:m-12 rounded-lg shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-6 flex flex-col space-y-4">
 
         {/* Large Image */}
