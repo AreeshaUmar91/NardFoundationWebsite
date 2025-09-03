@@ -18,10 +18,12 @@ const Header = () => {
 
   return (
     <div className="relative h-screen">
-      {/* Background Image */}
+      {/* Background Image with white left shadow */}
       <div
         className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: `url(${ContributionBg})` }}
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0)), url(${ContributionBg})`,
+        }}
       ></div>
 
       {/* Header */}
@@ -137,7 +139,7 @@ const Header = () => {
       <div className="relative z-10 flex items-center h-full px-6 lg:px-24">
         <div className="max-w-xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg text-left">
-            Special Needs<br/>Individuals
+            Special Needs<br />Individuals
           </h1>
         </div>
       </div>

@@ -10,7 +10,7 @@ const Partners = () => {
       img: Partner1Img,
       title: "Mountbatten Vocational School",
       content:
-        "“Deeds Not Words” The ear gives instant affiliation of the Association with the Deaf while the sphere provides the vision for the Deaf and also gives the design a global outlook and perspective.",
+        "“Deeds Not Words” <br/> The ear gives instant affiliation of the Association with the Deaf while the sphere provides the vision for the Deaf and also gives the design a global outlook and perspective.",
       readMore: true,
     },
     {
@@ -61,15 +61,18 @@ const Partners = () => {
               {/* Partner Heading */}
               <h3 className="text-xl font-bold text-black mb-2">{partner.title}</h3>
 
-              {/* Partner Content */}
-              <p className="text-gray-700 mb-2">
-                {partner.content}{" "}
-                {partner.readMore && (
-                  <span className="text-green-500 font-semibold cursor-pointer">
-                    Read more
-                  </span>
-                )}
-              </p>
+              {/* Partner Content with <br/> support */}
+              <p
+                className="text-gray-700 mb-2"
+                dangerouslySetInnerHTML={{ __html: partner.content }}
+              ></p>
+
+              {/* Read More */}
+              {partner.readMore && (
+                <span className="text-green-500 font-semibold cursor-pointer">
+                  Read more
+                </span>
+              )}
             </div>
           ))}
         </div>

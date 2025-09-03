@@ -16,7 +16,7 @@ const Blogs = () => {
   ];
 
   return (
-    <section className="py-16 bg-white mx-[72px]">
+    <section className="py-16 bg-white mx-[55px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Projects Grid with 2 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

@@ -1,6 +1,6 @@
 import { useState } from "react"; 
 import { Link, useLocation } from "react-router-dom";
-import ProjectImg from "../assets/contribution.svg"; // Replace with Contribution image if needed
+import ProjectImg from "../assets/contribution.svg"; // Replace with your image
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,10 +18,12 @@ const Header = () => {
 
   return (
     <div className="relative h-screen">
-      {/* Background */}
+      {/* Background Image with white left shadow */}
       <div
         className="absolute inset-0 bg-center bg-cover brightness-75"
-        style={{ backgroundImage: `url(${ProjectImg})` }}
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0)), url(${ProjectImg})`,
+        }}
       ></div>
 
       {/* Header */}
@@ -92,7 +94,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu (exact Projects page style) */}
+        {/* Mobile Menu */}
         {mobileOpen && (
           <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-end">
             <div className="w-64 bg-white p-6">
