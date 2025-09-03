@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"; 
 import { Link, useLocation } from "react-router-dom";
 import ProjectImg from "../assets/projectbg.svg";
 
@@ -18,10 +18,15 @@ const Header = () => {
 
   return (
     <div className="relative h-screen">
-      {/* Background without blur */}
+      {/* Background with left shadow */}
       <div
         className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: `url(${ProjectImg})` }}
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 20%),
+            url(${ProjectImg})
+          `,
+        }}
       ></div>
 
       {/* Header */}

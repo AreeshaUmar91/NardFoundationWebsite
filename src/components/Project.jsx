@@ -25,7 +25,7 @@ const Project = () => {
       title1: "Fund Raising: Upgrading Infrastructure",
       title2: "in Farming for Special Needs Individuals Workforce",
       raisedImg: RaisedImg2,
-      raisedMarginTop: "0px", // closer
+      raisedMarginTop: "2px", // closer
     },
     {
       img: ProjectImg3,
@@ -37,7 +37,7 @@ const Project = () => {
   ];
 
   return (
-    <section className="py-16 bg-white mx-[40px]">
+    <section className=" bg-white mx-[40px]">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6">
         {/* Heading */}
         <h4
@@ -68,7 +68,7 @@ const Project = () => {
         </div>
 
         {/* Projects Sections */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"> {/* smaller gap */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 "> {/* smaller gap */}
           {sections.map((section, index) => (
             <div
               key={index}
@@ -79,7 +79,7 @@ const Project = () => {
               <img
                 src={section.img}
                 alt={`Project ${index + 1}`}
-                className="w-full h-64 object-cover mb-2 rounded-md" // smaller margin
+                className="w-full h-64 object-cover mb-2 " // smaller margin
               />
 
               {/* Titles */}
@@ -90,12 +90,12 @@ const Project = () => {
               <img
                 src={section.raisedImg}
                 alt={`Raised ${index + 1}`}
-                className="h-12 w-auto mb-2"
+                className="h-12 w-auto "
                 style={{ marginTop: section.raisedMarginTop }}
               />
 
               {/* Raised and Goal Text */}
-              <div className="flex justify-between w-full mb-2">
+              <div className="flex justify-between w-full mb-5">
                 <p className="font-bold text-[#2E4049]">Raised-0M</p>
                 <p className="font-bold text-[#4CAF50]">Goal - SGD 10,000</p>
               </div>

@@ -57,6 +57,20 @@ const FeaturesAndStats = () => {
       {/* Features Section */}
       <section className="py-16 bg-white mx-[50px]" id="features">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <h4 className="flex items-center mb-4 font-bold " style={{ color: '#252A34' }}>
+  About
+  <span
+    className="ml-3"
+    style={{
+      width: '60px',
+      height: '1px',
+      backgroundColor: '#00000040',
+      display: 'inline-block',
+    }}
+  ></span>
+</h4>
+
+
           <h2 className="text-black text-3xl sm:text-4xl font-bold mb-12 text-left">
             Our Features
           </h2>

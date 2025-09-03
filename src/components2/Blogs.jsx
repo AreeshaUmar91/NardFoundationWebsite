@@ -16,28 +16,27 @@ const Blogs = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+    <section className="py-16 bg-white mx-[72px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Projects Grid with 2 columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project, index) => {
             const isComingSoon = [2, 4, 5].includes(index);
 
             return (
               <div
                 key={project.id}
-                className="relative flex flex-col h-full bg-white p-4 rounded-lg shadow-md"
+                className="flex flex-col justify-between bg-transparent p-0"
               >
                 {/* Project Image */}
-                <div className="relative w-full">
+                <div className="w-full relative">
                   <img
                     src={project.img}
                     alt={project.title}
-                    className="w-full h-64 sm:h-72 md:h-64 lg:h-72 object-cover rounded-md"
+                    className="w-full object-contain"
                   />
-                  {/* Overlay for Coming Soon */}
                   {isComingSoon && (
-                    <div className="absolute inset-0 bg-[#D9D9D9B2] flex items-center justify-center rounded-md">
+                    <div className="absolute inset-0 bg-[#D9D9D9B2] flex items-center justify-center">
                       <span className="text-black text-xl font-semibold">Coming Soon</span>
                     </div>
                   )}
@@ -45,19 +44,19 @@ const Blogs = () => {
 
                 {/* Project Name */}
                 <p
-                  className="font-semibold text-gray-900 mt-4 mb-4 flex-1"
+                  className="font-semibold text-gray-900 mt-4 mb-4"
                   style={{ fontSize: "20px", lineHeight: "1.4" }}
                   dangerouslySetInnerHTML={{ __html: project.title }}
                 ></p>
 
-                {/* Buttons */}
-                <div className="flex flex-col sm:flex-row justify-between w-full gap-3 mt-auto">
-                  <button className="h-12 flex-1 px-4 rounded-2xl bg-[#E8E8E8] flex items-center justify-center gap-2 font-bold text-sm sm:text-base">
-                    <span>Donation:</span>
-                    <span>{project.donation}</span>
-                  </button>
+                {/* Buttons: flex row */}
+                <div className="flex justify-between gap-3">
+                   <button className="h-12 flex-[2] px-[50px] rounded-3xl bg-[#E8E8E8] flex items-center justify-between font-bold text-sm sm:text-base">
+    <span>Donation:</span>
+    <span>{project.donation}</span>
+  </button>
 
-                  <button className="h-12 flex-1 px-4 rounded-3xl text-white bg-[#263750] font-normal text-sm sm:text-base">
+                  <button className="h-12 flex-[1] px-4 rounded-3xl text-white bg-[#263750] font-normal text-sm sm:text-base">
                     CONTRIBUTION
                   </button>
                 </div>
