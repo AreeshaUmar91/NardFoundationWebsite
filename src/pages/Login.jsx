@@ -22,7 +22,7 @@ const Login = () => {
         <h1 className="text-3xl font-bold text-[#273750] mb-8 text-center">
           Work For Us
         </h1>
-        <form onSubmit={handleLogin} className="space-y-4">
+        <form onSubmit={handleLogin} className="space-y-6">
           {/* Email Address */}
           <input
             type="email"
@@ -39,13 +39,13 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              placeholder=" Login Password"
+              placeholder="Login Password"
               value={formData.password}
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 rounded"
               required
             />
-            <p className="text-sm text-blue-600 absolute right-3 bottom-3 cursor-pointer">
+            <p className="text-sm text-black absolute right-0 mt-1 cursor-pointer">
               Forgot password?
             </p>
           </div>

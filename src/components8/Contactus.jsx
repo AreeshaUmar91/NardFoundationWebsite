@@ -2,19 +2,19 @@ import ContactImg from "../assets/contact-image.svg"; // Replace with your image
 
 const Contactus = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white px-6 py-16">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white py-16 px-6">
       {/* Heading */}
       <h1 className="text-4xl font-bold text-black text-center mb-4">
         Get In Touch With Us
       </h1>
-      <p className="text-center text-gray-700 mb-12">
+      <p className="text-center text-gray-700 mb-12 max-w-3xl">
         Veniam quae. Nostrum facere repellendus minus quod aut aliquam. Qui vel magnam repudiandae ipsum.
       </p>
 
-      {/* Two-column layout */}
-      <div className="flex flex-col lg:flex-row items-start gap-[10px] max-w-6xl w-full">
+      {/* Two-column layout with 10px gap */}
+      <div className="flex flex-col lg:flex-row items-center  max-w-6xl w-full sl:gap-[0px]">
         {/* Left: Image */}
-        <div className="flex-1 flex justify-center items-start">
+        <div className="flex-1 flex justify-center">
           <img
             src={ContactImg}
             alt="Contact"
