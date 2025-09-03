@@ -18,10 +18,12 @@ const Header = () => {
 
   return (
     <div className="relative w-full h-screen overflow-x-hidden">
-      {/* Background */}
+      {/* Background with soft white shadow on left */}
       <div
-        className="absolute inset-0 bg-center bg-cover brightness-75"
-        style={{ backgroundImage: `url(${HeroImg})` }}
+        className="absolute inset-0 bg-center bg-cover"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 20%, transparent 50%), url(${HeroImg})`,
+        }}
       ></div>
 
       {/* Header */}
