@@ -1,44 +1,47 @@
-// import React from "react";
-// import { FaGooglePlay, FaApple } from "react-icons/fa";
+import React from "react";
+import playstoreImage from "../assets/Play-Store.svg"; 
+import SampleImage from "../assets/your-image.svg"; // Replace with your image path
+import googlestore from "../assets/Google-Play.svg"; 
 
-// const Vision = () => {
-//   return (
-//     <section className="bg-white max-w-6xl text-black py-20 px-6">
-//       <div className="max-w-4xl mx-auto text-center space-y-6">
-//         {/* Heading */}
-//         <h1 className="text-5xl font-bold text-black">Nard Homebiz</h1>
-//         <h2 className="text-2xl font-semibold text-gray-700">
-//           Realize Your Entrepreneurial Vision
-//         </h2>
+const Vision = () => {
+  return (
+    <section className="bg-white py-20">
+      <div className="container mx-auto px-6 grid grid-rows-2 gap-12 items-center">
+        {/* Top Content */}
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-black mb-4">Nard Homebiz</h1>
+          <h2 className="text-xl font-normal text-[#8396AC] mb-6">
+            Realize Your Entrepreneurial Vision
+          </h2>
+          {/* Three lines as separate paragraphs */}
+          <p className="text-base text-gray-700 mb-2">
+            Transform your home-based business with Nard Homebiz Solution. Our intuitive platform is tailor-made to simplify operations for a variety of industries,
+          </p>
+          <p className="text-base text-gray-700 mb-2">
+            from cozy coffee brew cafes to thriving tutoring services. With user-friendly features and robust functionality, Nard Homebiz Solution is your key to unlocking
+          </p>
+          <p className="text-base text-gray-700 mb-6">
+            entrepreneurial success from the comfort of your home.
+          </p>
 
-//         {/* Description */}
-//         <p className="text-gray-800 text-lg leading-relaxed whitespace-pre-line">
-//           Transform your home-based business with Nard Homebiz Solution. Our intuitive platform is tailor-made to simplify operations for a variety of industries, <br/>
-//           cozy coffee brew cafes to thriving tutoring services. With user-friendly features and robust functionality, Nard Homebiz Solution is your key to unlocking<br/>
-//           entrepreneurial success from the comfort of your home.
-//         </p>
+          {/* Play Store & Google Play Buttons */}
+          <div className="flex justify-center items-center gap-6">
+            <img src={playstoreImage} alt="Play Store" className="max-w-xs" />
+            <img src={googlestore} alt="Google Play" className="max-w-xs" />
+          </div>
+        </div>
 
-//         {/* Buttons */}
-//         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
-//           <button className="flex flex-col items-center bg-black text-white px-6 py-4 rounded-lg hover:bg-gray-900 transition">
-//             <div className="flex items-center gap-2 mb-1">
-//               <FaGooglePlay size={24} />
-//               <span className="font-bold text-white text-lg">GET IT ON</span>
-//             </div>
-//             <span className="text-gray-300 text-sm font-semibold">GOOGLE PLAY</span>
-//           </button>
+        {/* Bottom Image */}
+        <div className="flex justify-center">
+          <img
+            src={SampleImage}
+            alt="Nard Homebiz"
+            className="w-[calc(100%-200px)] max-w-[calc(100%-200px)] rounded-lg shadow-lg mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-//           <button className="flex flex-col items-center bg-black text-white px-6 py-4 rounded-lg hover:bg-gray-900 transition">
-//             <span className="text-gray-300 text-sm mb-1">Available in Pro</span>
-//             <div className="flex items-center gap-2">
-//               <FaApple size={24} />
-//               <span className="text-gray-200 font-semibold text-lg">Apple Store</span>
-//             </div>
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Vision;
+export default Vision;
