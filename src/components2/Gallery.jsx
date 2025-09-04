@@ -18,17 +18,17 @@ const Gallery = () => {
 
         {/* First Row - 3 images */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <img src={Gallery1} alt="Gallery 1" className="w-full h-48 sm:h-60 object-cover" />
-          <img src={Gallery2} alt="Gallery 2" className="w-full h-48 sm:h-60 object-cover" />
-          <img src={Gallery3} alt="Gallery 3" className="w-full h-48 sm:h-60 object-cover" />
+          <img src={Gallery1} alt="Gallery 1" className="w-full h-64 sm:h-72 max-[760px]:h-96 object-cover" />
+          <img src={Gallery2} alt="Gallery 2" className="w-full h-64 sm:h-72 max-[760px]:h-96 object-cover" />
+          <img src={Gallery3} alt="Gallery 3" className="w-full h-64 sm:h-72 max-[760px]:h-96 object-cover" />
         </div>
 
         {/* Second Row - 4 images */}
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-          <img src={Gallery4} alt="Gallery 4" className="w-full h-40 sm:h-48 object-cover" />
-          <img src={Gallery5} alt="Gallery 5" className="w-full h-40 sm:h-48 object-cover" />
-          <img src={Gallery6} alt="Gallery 6" className="w-full h-40 sm:h-48 object-cover" />
-          <img src={Gallery7} alt="Gallery 7" className="w-full h-40 sm:h-48 object-cover" />
+          <img src={Gallery4} alt="Gallery 4" className="w-full h-52 sm:h-64 max-[760px]:h-80 object-cover" />
+          <img src={Gallery5} alt="Gallery 5" className="w-full h-52 sm:h-64 max-[760px]:h-80 object-cover" />
+          <img src={Gallery6} alt="Gallery 6" className="w-full h-52 sm:h-64 max-[760px]:h-80 object-cover" />
+          <img src={Gallery7} alt="Gallery 7" className="w-full h-52 sm:h-64 max-[760px]:h-80 object-cover" />
         </div>
       </div>
     </section>
