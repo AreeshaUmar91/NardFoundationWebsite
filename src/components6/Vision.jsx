@@ -1,6 +1,6 @@
 import React from "react";
 import playstoreImage from "../assets/Play-Store.svg"; 
-import SampleImage from "../assets/your-image.svg"; // Replace with your image path
+import SampleImage from "../assets/your-image.svg"; 
 import googlestore from "../assets/Google-Play.svg"; 
 
 const Vision = () => {

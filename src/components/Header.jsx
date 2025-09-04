@@ -17,18 +17,25 @@ const Header = () => {
   ];
 
   return (
-    <div className="relative w-full h-screen overflow-x-hidden">
-      {/* Background with soft white shadow on left */}
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Hero Background */}
       <div
-        className="absolute inset-0 bg-center bg-cover"
+        className="absolute inset-0 w-full h-full bg-center bg-cover"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 20%, transparent 50%), url(${HeroImg})`,
+          backgroundImage: `linear-gradient(
+            to right,
+            rgba(255,255,255,0.3) 0%,
+            rgba(255,255,255,0.1) 20%,
+            transparent 50%
+          ), url(${HeroImg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       ></div>
 
       {/* Header */}
-      <header className="absolute inset-x-0 top-0 z-50 px-4 sm:px-6 md:px-8 flex items-center justify-between w-full">
-        {/* Logo + Name */}
+      <header className="absolute inset-x-0 top-0 z-50 flex items-center justify-between w-full px-4 sm:px-6 md:px-8">
+        {/* Logo */}
         <div className="flex flex-col items-center">
           <img src="/logo.png" alt="Logo" className="h-16 w-auto" />
           <span className="text-[#263750] font-bold text-sm mt-1 text-center">
@@ -36,7 +43,7 @@ const Header = () => {
           </span>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <nav className="hidden lg:flex flex-1 justify-around items-center bg-[#FFFFFF80] px-4 py-2 ml-4 rounded-md">
           {navLinks.map((item) => (
             <Link
@@ -95,13 +102,13 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-end">
-          <div className="w-64 bg-white p-6">
+        <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-70 flex justify-end">
+          <div className="w-64 h-full bg-white p-6 overflow-y-auto">
             <button
               onClick={() => setMobileOpen(false)}
-              className="mb-4 text-gray-700 font-semibold"
+              className="mb-6 text-gray-700 font-semibold"
             >
-              Close
+              ✕ Close
             </button>
             <nav className="flex flex-col gap-4">
               {navLinks.map((item) => (
@@ -117,14 +124,14 @@ const Header = () => {
               <Link
                 to="/signup"
                 onClick={() => setMobileOpen(false)}
-                className="bg-green-500 text-white px-4 py-2 rounded font-semibold"
+                className="bg-green-500 text-white px-4 py-2 rounded font-semibold text-center"
               >
                 Sign Up
               </Link>
               <Link
                 to="/login"
                 onClick={() => setMobileOpen(false)}
-                className="text-gray-900 font-semibold"
+                className="text-gray-900 font-semibold text-center"
               >
                 Log In
               </Link>
@@ -134,15 +141,17 @@ const Header = () => {
       )}
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col justify-center items-start h-full w-full px-4 sm:px-6 md:px-8 lg:px-16 text-left">
-        <span className="text-white font-normal mb-2 text-lg sm:text-xl">
-          Social Responsibility...
-        </span>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white drop-shadow-lg leading-snug">
-          Giving back to <br />
-          society is everyone's <br />
-          responsibility
-        </h1>
+      <div className="relative z-10 flex flex-col justify-center h-screen w-full">
+        <div className="w-full max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-16 text-left max-[760px]:text-center">
+          <span className="text-white font-normal mb-2 text-lg sm:text-xl max-[1080px]:text-2xl">
+            Social Responsibility...
+          </span>
+          <h1 className="text-6xl font-bold text-white drop-shadow-lg leading-snug max-[1080px]:text-5xl max-[1080px]:leading-tight max-[760px]:text-4xl max-[760px]:leading-snug">
+            Giving back to <br />
+            society is everyone's <br />
+            responsibility
+          </h1>
+        </div>
       </div>
     </div>
   );
