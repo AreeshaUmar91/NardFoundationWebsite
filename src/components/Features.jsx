@@ -30,55 +30,41 @@ const FeaturesAndStats = () => {
   ];
 
   const stats = [
-    {
-      img: LikesImg,
-      number: "4975+",
-      label: "Likes",
-    },
-    {
-      img: VolunteersImg,
-      number: "8945+",
-      label: "Volunteers",
-    },
-    {
-      img: AssistedImg,
-      number: "10M+",
-      label: "Assisted People",
-    },
-    {
-      img: EducatedImg,
-      number: "100+",
-      label: "Educated",
-    },
+    { img: LikesImg, number: "4975+", label: "Likes" },
+    { img: VolunteersImg, number: "8945+", label: "Volunteers" },
+    { img: AssistedImg, number: "10M+", label: "Assisted People" },
+    { img: EducatedImg, number: "100+", label: "Educated" },
   ];
 
   return (
     <>
       {/* Features Section */}
-      <section className="py-16 bg-white mx-[50px]" id="features">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h4 className="flex items-center mb-4 font-bold " style={{ color: '#252A34' }}>
-  About
-  <span
-    className="ml-3"
-    style={{
-      width: '60px',
-      height: '1px',
-      backgroundColor: '#00000040',
-      display: 'inline-block',
-    }}
-  ></span>
-</h4>
-
+      <section className="py-16 bg-white mx-[50px] max-[760px]:mx-2" id="features">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 max-[760px]:max-w-full">
+          <h4
+            className="flex items-center mb-4 font-bold"
+            style={{ color: "#252A34" }}
+          >
+            About
+            <span
+              className="ml-3"
+              style={{
+                width: "60px",
+                height: "1px",
+                backgroundColor: "#00000040",
+                display: "inline-block",
+              }}
+            ></span>
+          </h4>
 
           <h2 className="text-black text-3xl sm:text-4xl font-bold mb-12 text-left">
             Our Features
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-[760px]:w-full max-[760px]:mx-auto">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#C1FFC3] flex flex-col overflow-hidden p-6"
+                className="bg-[#C1FFC3] flex flex-col overflow-hidden p-6 max-[760px]:w-full"
               >
                 <img
                   src={feature.img}
@@ -88,7 +74,9 @@ const FeaturesAndStats = () => {
                 <h3 className="text-xl sm:text-2xl font-semibold mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700 text-sm sm:text-base">{feature.content}</p>
+                <p className="text-gray-700 text-sm sm:text-base">
+                  {feature.content}
+                </p>
               </div>
             ))}
           </div>
@@ -96,23 +84,31 @@ const FeaturesAndStats = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white -mt-10 py-12 mx-[50px]" id="stats">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <section
+        className="bg-white -mt-10 py-12 mx-[50px] max-[760px]:mx-2"
+        id="stats"
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 max-[760px]:max-w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-[760px]:w-full">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-[#C1FFC3] flex flex-col items-center justify-center p-6 h-72"
+                className="bg-[#C1FFC3] flex flex-col items-center justify-center p-6 h-72 max-[760px]:w-full"
               >
                 <img
                   src={stat.img}
                   alt={stat.label}
                   className="w-16 h-16 mb-4 object-contain"
                 />
-                <h3 className="text-3xl font-bold mb-2" style={{ color: "#2E4049" }}>
+                <h3
+                  className="text-3xl font-bold mb-2"
+                  style={{ color: "#2E4049" }}
+                >
                   {stat.number}
                 </h3>
-                <p className="text-gray-700 text-sm sm:text-base">{stat.label}</p>
+                <p className="text-gray-700 text-sm sm:text-base">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>

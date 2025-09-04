@@ -18,27 +18,27 @@ const Project = () => {
       title1: "Fund Raising: Education For Special",
       title2: "Needs Individuals In Urban Farming",
       raisedImg: RaisedImg1,
-      raisedMarginTop: "30px", // closer
+      raisedMarginTop: "30px",
     },
     {
       img: ProjectImg2,
       title1: "Fund Raising: Upgrading Infrastructure",
       title2: "in Farming for Special Needs Individuals Workforce",
       raisedImg: RaisedImg2,
-      raisedMarginTop: "2px", // closer
+      raisedMarginTop: "2px",
     },
     {
       img: ProjectImg3,
       title1: "Fund Raising: Maintenance for",
       title2: "Nard Foundation Urban Farm",
       raisedImg: RaisedImg3,
-      raisedMarginTop: "30px", // closer
+      raisedMarginTop: "30px",
     },
   ];
 
   return (
-    <section className=" bg-white mx-[40px]">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6">
+    <section className="bg-white mx-[40px] max-[1100px]:mx-6 max-[760px]:mx-2">
+      <div className="max-w-[1600px] max-[760px]:max-w-full mx-auto px-4 sm:px-6">
         {/* Heading */}
         <h4
           className="text-green-500 mb-4"
@@ -49,12 +49,12 @@ const Project = () => {
 
         {/* Subheading and Button */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-left max-[760px]:text-center">
             You can help lots of people <br /> by donating little.
           </h1>
           <Link
             to="/projectsPage"
-            className="flex items-center justify-center text-white font-normal"
+            className="flex items-center justify-center text-white font-normal max-[760px]:mx-auto"
             style={{
               width: "180px",
               height: "60px",
@@ -68,18 +68,18 @@ const Project = () => {
         </div>
 
         {/* Projects Sections */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 "> {/* smaller gap */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-[760px]:w-full max-[760px]:mx-auto">
           {sections.map((section, index) => (
             <div
               key={index}
-              className="flex flex-col items-start text-left p-3" // smaller padding
+              className="flex flex-col items-start text-left p-3 max-[760px]:w-full max-[760px]:mx-auto"
               style={{ border: "none", borderRadius: "0", boxShadow: "none" }}
             >
               {/* Project Image */}
               <img
                 src={section.img}
                 alt={`Project ${index + 1}`}
-                className="w-full h-64 object-cover mb-2 " // smaller margin
+                className="w-full h-64 object-cover mb-2"
               />
 
               {/* Titles */}
@@ -90,12 +90,12 @@ const Project = () => {
               <img
                 src={section.raisedImg}
                 alt={`Raised ${index + 1}`}
-                className="h-12 w-auto "
+                className="h-12 w-auto"
                 style={{ marginTop: section.raisedMarginTop }}
               />
 
               {/* Raised and Goal Text */}
-              <div className="flex justify-between w-full mb-5">
+              <div className="flex justify-between w-full mb-5 max-[760px]:flex-col max-[760px]:gap-2">
                 <p className="font-bold text-[#2E4049]">Raised-0M</p>
                 <p className="font-bold text-[#4CAF50]">Goal - SGD 10,000</p>
               </div>
@@ -103,7 +103,7 @@ const Project = () => {
               {/* Contribution Button */}
               <Link
                 to="/donate"
-                className="px-6 py-2 text-white rounded-full hover:bg-green-600 transition"
+                className="px-6 py-2 text-white rounded-full hover:bg-green-600 transition max-[760px]:w-full max-[760px]:text-center"
                 style={{ backgroundColor: "#263750" }}
               >
                 CONTRIBUTION

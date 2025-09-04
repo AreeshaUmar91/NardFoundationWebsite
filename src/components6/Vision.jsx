@@ -7,13 +7,13 @@ const Vision = () => {
   return (
     <section className="bg-white py-20">
       <div className="container mx-auto px-6 grid grid-rows-2 gap-12 items-center">
+
         {/* Top Content */}
         <div className="text-center">
           <h1 className="text-5xl font-bold text-black mb-4">Nard Homebiz</h1>
           <h2 className="text-xl font-normal text-[#8396AC] mb-6">
             Realize Your Entrepreneurial Vision
           </h2>
-          {/* Three lines as separate paragraphs */}
           <p className="text-base text-gray-700 mb-2">
             Transform your home-based business with Nard Homebiz Solution. Our intuitive platform is tailor-made to simplify operations for a variety of industries,
           </p>
@@ -36,9 +36,16 @@ const Vision = () => {
           <img
             src={SampleImage}
             alt="Nard Homebiz"
-            className="w-[calc(100%-200px)] max-w-[calc(100%-200px)] rounded-lg shadow-lg mx-auto"
+            className="
+              w-full max-w-4xl 
+              h-auto 
+              md:w-[90%] md:max-w-[90%] 
+              lg:w-[80%] lg:max-w-[80%] 
+              rounded-lg shadow-lg mx-auto
+            "
           />
         </div>
+
       </div>
     </section>
   );

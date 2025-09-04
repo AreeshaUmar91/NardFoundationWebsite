@@ -10,7 +10,7 @@ const Picture = () => {
 
         {/* Section Title */}
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-left mb-12">
-         Our Partner
+          Our Partner
         </h2>
 
         {/* First Row - 3 images side by side */}
@@ -18,17 +18,17 @@ const Picture = () => {
           <img
             src={Gallery1}
             alt="Volunteer 1"
-            className="w-full h-48 sm:h-60 object-cover"
+            className="w-full h-48 sm:h-60 max-[760px]:h-80 object-cover"
           />
           <img
             src={Gallery2}
             alt="Volunteer 2"
-            className="w-full h-48 sm:h-60 object-cover"
+            className="w-full h-48 sm:h-60 max-[760px]:h-80 object-cover"
           />
           <img
             src={Gallery3}
             alt="Volunteer 3"
-            className="w-full h-48 sm:h-60 object-cover"
+            className="w-full h-48 sm:h-60 max-[760px]:h-80 object-cover"
           />
         </div>
 
@@ -37,22 +37,22 @@ const Picture = () => {
           <img
             src={Gallery1} // Reuse or add more images if available
             alt="Volunteer 1"
-            className="w-full h-40 sm:h-48 object-cover"
+            className="w-full h-40 sm:h-48 max-[760px]:h-72 object-cover"
           />
           <img
             src={Gallery2}
             alt="Volunteer 2"
-            className="w-full h-40 sm:h-48 object-cover"
+            className="w-full h-40 sm:h-48 max-[760px]:h-72 object-cover"
           />
           <img
             src={Gallery3}
             alt="Volunteer 3"
-            className="w-full h-40 sm:h-48 object-cover"
+            className="w-full h-40 sm:h-48 max-[760px]:h-72 object-cover"
           />
           <img
             src={Gallery4}
             alt="Volunteer 4"
-            className="w-full h-40 sm:h-48 object-cover"
+            className="w-full h-40 sm:h-48 max-[760px]:h-72 object-cover"
           />
         </div>
 
