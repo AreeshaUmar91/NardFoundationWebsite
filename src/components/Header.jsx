@@ -31,7 +31,7 @@ const Header = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-      ></div>
+      />
 
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50 flex items-center justify-between w-full px-4 sm:px-6 md:px-8">
@@ -73,10 +73,10 @@ const Header = () => {
         <div className="lg:hidden flex items-center ml-auto">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 rounded-md text-white focus:outline-none"
+            className="p-3 rounded-md text-white focus:outline-none"
           >
             <svg
-              className="w-6 h-6"
+              className="w-10 h-10"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
