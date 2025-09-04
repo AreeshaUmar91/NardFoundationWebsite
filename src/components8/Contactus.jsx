@@ -11,19 +11,19 @@ const Contactus = () => {
         Veniam quae. Nostrum facere repellendus minus quod aut aliquam. Qui vel magnam repudiandae ipsum.
       </p>
 
-      {/* Two-column layout with 10px gap */}
-      <div className="flex flex-col lg:flex-row items-center  max-w-6xl w-full sl:gap-[0px]">
+      {/* Responsive layout */}
+      <div className="flex flex-col lg:flex-row items-center w-full max-w-6xl gap-6">
         {/* Left: Image */}
         <div className="flex-1 flex justify-center">
           <img
             src={ContactImg}
             alt="Contact"
-            className="w-80 h-auto"
+            className="w-80 max-[760px]:w-full h-auto max-[760px]:max-w-md"
           />
         </div>
 
         {/* Right: Form */}
-        <div className="flex-1 border border-black p-8 rounded-md">
+        <div className="flex-1 border border-black p-8 rounded-md w-full max-[760px]:w-full">
           <form className="flex flex-col gap-6">
             {/* Name */}
             <div className="flex flex-col">
