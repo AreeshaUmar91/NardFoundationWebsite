@@ -19,7 +19,7 @@ const Blogs = () => {
     <section className="py-16 bg-white mx-[55px] max-[1100px]:mx-6 max-[760px]:mx-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-[760px]:grid-cols-1 max-[760px]:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-[760px]:grid-cols-1 max-[760px]:gap-6">
           {projects.map((project, index) => {
             const isComingSoon = [2, 4, 5].includes(index);
 
@@ -33,7 +33,7 @@ const Blogs = () => {
                   <img
                     src={project.img}
                     alt={project.title}
-                    className="w-full object-contain max-[760px]:h-[30rem]" // taller on small screens
+                    className="w-full object-contain" // keep original height
                   />
                   {isComingSoon && (
                     <div className="absolute inset-0 bg-[#D9D9D9B2] flex items-center justify-center">
