@@ -56,8 +56,7 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Mobile Hamburger */}
-         <div className="lg:hidden flex items-center ml-auto">
+          <div className="lg:hidden flex items-center ml-auto">
   <button
     onClick={() => setMobileOpen(!mobileOpen)}
     className="p-3 rounded-md text-black focus:outline-none" // larger padding
@@ -88,34 +87,42 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="lg:hidden bg-[#FFFFFF80] w-full absolute top-full left-0 z-50 shadow-md">
-            <nav className="flex flex-col gap-4 p-4">
-              {menuItems.map((item) => (
+         {mobileOpen && (
+          <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-end">
+            <div className="w-64 bg-white p-6">
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="mb-4 text-gray-700 font-semibold"
+              >
+                Close
+              </button>
+              <nav className="flex flex-col gap-4">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={() => setMobileOpen(false)}
+                    className="font-medium text-gray-900 hover:text-green-500 transition"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
                 <Link
-                  key={item.name}
-                  to={item.path}
+                  to="/signup"
                   onClick={() => setMobileOpen(false)}
-                  className="font-medium text-gray-900 hover:text-green-500 transition"
+                  className="bg-green-500 text-white px-4 py-2 rounded font-medium"
                 >
-                  {item.name}
+                  Sign Up
                 </Link>
-              ))}
-              <Link
-                to="/signup"
-                onClick={() => setMobileOpen(false)}
-                className="bg-green-500 text-white px-3 py-1 font-medium rounded"
-              >
-                Sign Up
-              </Link>
-              <Link
-                to="/login"
-                onClick={() => setMobileOpen(false)}
-                className="text-gray-900 font-medium"
-              >
-                Log In
-              </Link>
-            </nav>
+                <Link
+                  to="/login"
+                  onClick={() => setMobileOpen(false)}
+                  className="text-gray-900 font-medium"
+                >
+                  Log In
+                </Link>
+              </nav>
+            </div>
           </div>
         )}
       </header>
